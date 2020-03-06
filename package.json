@@ -4,9 +4,16 @@
   "author": "Dima Parzhitsky <parzhitsky@gmail.com>",
   "keywords": [],
   "private": true,
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node src"
+    "start": "node --require ts-node/register src",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "@types/node": "13.9.0",
+    "ts-node": "8.6.2",
+    "typescript": "3.8.3"
   }
 }
